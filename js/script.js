@@ -42,10 +42,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   // Filtra los elementos de la lista que son de tipo String
   const arrayFiltrado = strangeArray.filter((element) => typeof element == "string");
-  // Minusculas a todo el array para que ordene correctamente
-  const arrayMinus = arrayFiltrado.map (element => element.toLocaleLowerCase());
   // Ordena los elementosya filtrados
-  const arrayOrdenado = arrayMinus.sort();
+  const arrayOrdenado = arrayFiltrado.sort((a,b) => a.localeCompare(b));
 
   showList(arrayOrdenado);
 
